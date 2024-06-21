@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function validateFunction()
+        {
+            if(t1.value=="")
+            {
+                alert("HI");
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <form method="get" action="evt1.html" onsubmit="return validateFunction()">
+        Name:<input type="text" value="" id="t1">
+        <hr>
+        <input type="Submit"  value="Submit button"><br>
+        <input type="button" onclick="validateFunction()" value="button">
+    </form>
+</body>
+</html>

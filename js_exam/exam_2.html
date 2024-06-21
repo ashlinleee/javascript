@@ -1,0 +1,37 @@
+<!--Write a JavaScript conditional statement to sort three numbers and then
+Display an alert box to show the result.
+Sample numbers : 3, -7, 2 
+Output: The sign is: "-"
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam2</title>
+</head>
+<body>
+     <script>
+       let num1 = 3;
+       let num2 = -7;
+       let num3 = 2;
+       let arr = [num1, num2, num3];
+     
+      arr.sort((a, b) => a - b);
+       let sign = "";
+       if (arr[0] >=  0 && arr[1] <= 0 && arr[2] <= 0)
+       {
+           sign = "+";
+       }
+       else if (arr[0] <= 0 && arr[1] >=  0 && arr[2] >= 0)
+       {
+           sign = "-";
+       }
+       else
+       {
+           sign = "0";
+       }
+       alert("The sign is: " + sign);
+     </script> 
+</body>
+</html>

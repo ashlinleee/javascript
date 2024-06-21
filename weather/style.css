@@ -1,0 +1,22 @@
+body {
+    background-color: #f3e1e1;
+  }
+  
+  .card {
+    margin-top: 50px;
+  }
+  
+  .card-header {
+    text-align: center;
+  }
+  
+  .weather-container {
+    display: none;
+    text-align: center;
+  }
+  
+  #icon {
+    width: 100px;
+    margin-top: 20px;
+  }
+  

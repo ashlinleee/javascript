@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>Enumeration</title>
+</head>
+<body>
+<script>
+function enum1()
+{
+
+alert("enum1");
+
+var SIZE = {
+  SMALL : {value: 0, name: "Small", code: "X"}, 
+  MEDIUM: {value: 1, name: "Medium", code: "XL"}, 
+  LARGE : {value: 2, name: "Large", code: "XXL"}
+};
+var bagsize = SIZE.MEDIUM;
+if (bagsize == SIZE.MEDIUM) {
+  
+  alert(bagsize.value + ": " + bagsize.name);
+}
+}
+function enum2()
+{
+	var SIZE = 
+	{
+		fname:"ABC",
+		  SMALL : {value: 0, name: "Small", code: "X"}, 
+		  MEDIUM: {value: 1, name: "Medium", code: "XL"}, 
+		  LARGE : {value: 2, name: "Large", code: "XXL"}
+	};
+	var bagsize = SIZE.MEDIUM;
+	if (bagsize == SIZE.MEDIUM) {
+	  alert(bagsize.value + ": " + bagsize.name);
+	}
+
+	SIZE.SMALL.name="Extra Large";
+	alert(SIZE.SMALL.name);
+	Object.freeze(SIZE);
+	SIZE.fname="New";
+	alert(SIZE.fname);
+
+}
+</script>
+<h1>Enumeration </h1>
+<input type="button" value="enum1" onclick="enum1()">
+<br/>
+<input type="button" value="enum2" onclick="enum2()">
+<br/>
+</body>

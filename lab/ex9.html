@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mattel</title>
+    <style>
+        .consent_bar {
+            background-color: darkgrey;
+            height: 50px;
+            padding: auto;
+            position: sticky;
+            top: 0px;
+        }
+        .consent_button {
+            padding: 13px;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 1em;
+        }
+        .logo {
+            margin-right: auto;
+        }
+        .dropbtn {
+            background-color: #da370e;
+            color: white;
+            padding: 16px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f2caca;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown:hover .dropbtn {
+            background-color: #da370e;
+        }
+    </style>
+    <script>
+        function hideConsent() {
+            var x = document.getElementById("acceptBtn");
+            if (x.style.display == "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="consent_bar" id="acceptBtn">
+        <p style="float: left;">By using the Mattel site, you agree with our use of cookies.</p>
+        <div class="consent_button">
+            <button onclick="hideConsent()" style="background-color: #da370e; float: right;">Accept Cookies</button>
+        </div>
+    </div>
+    <header>
+        <div class="logo">
+            <img src="mattel.svg" alt="logo" width="20%">
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">Shop</button>
+            <div class="dropdown-content">
+                <a href="#">Mattel Shop</a>
+                <a href="#">Mattel Creations</a>
+                <a href="#">American Girl</a>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

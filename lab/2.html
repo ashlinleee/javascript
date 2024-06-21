@@ -1,0 +1,29 @@
+<!-- Write a JavaScript program that calculates and prints the square root of a given number. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2</title>
+</head>
+<body>
+     <h1>Square Root Calculator</h1>
+     <label for="num1">Number 1: </label><input type="number" id="num1"><br>
+     
+     <button onclick="calculate()">Calculate Square Root</button>
+     <p id="result"></p>
+     
+     <script>
+         function calculate(){
+             let num1 = document.getElementById("num1").value;
+             
+             if(num1) {
+                 let sqrt = parseInt(num1) * parseInt(num1);
+                 document.getElementById("result").innerHTML = "The sqrt is: "+sqrt;
+             } 
+             
+         }
+     </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo13</title>
+</head>
+<body>
+    <script>
+        function example1()
+        {
+            alert("Objects 1");
+            var obj=
+            {
+            model:"Real me",
+            price:8000,
+            CamResolution:"48px"
+            }
+            alert(obj.model);
+            obj.model="Jio";
+            alert(obj["model"]);
+            alert(obj.price);
+            alert(obj["CamResolution"]);
+        };
+        function example2()
+        {
+            alert("Objects 2");
+            var obj={instrumentName:"Guitar",price:10000}
+            alert(obj.instrumentName);
+            alert(obj["price"]);
+            obj.type="acoustic";
+            obj.material="wood";
+            alert(obj.material);
+            alert(obj.type);
+            delete obj.price;
+            alert(obj.price);
+        };
+        function example3()
+        {
+            alert("Objects 3");
+            var objSong=
+            {songname:"saregamapa", songtype:"classical",raganame:"tilang"}
+            for (x in objSong)
+            {
+                alert(x);
+                alert(objSong[x]);
+            }
+        };
+        function example4()
+        {
+            alert("Objects 4");
+            var laptops=
+                [{ModelName:"HCL", price:33000}, {ModelName:"HP", price:43000}, {ModelName:"DELL", price:23000}, {ModelName:"MaBbook", price:60000}]
+                document.write("<hr>");
+                document.write(laptops)
+                document.write("<hr>");
+                document.write(laptops[1])
+                document.write("<hr>");
+                document.write("The Laptop details are as mentioned");
+                for(x in laptops)
+                {
+                    for(y in laptops[x])
+                    {
+                        document.write(y+" : "+laptops[x][y]+"<br>")
+                    }
+                    document.write("<hr>");
+                }
+        };
+    </script>
+    <input type="button" onclick="example1()" value="Object1"><br><br>
+    <input type="button" onclick="example2()" value="Object2"><br><br>
+    <input type="button" onclick="example3()" value="Object3"><br><br>
+    <input type="button" onclick="example4()" value="Object4"><br><br>
+</body>
+</html>

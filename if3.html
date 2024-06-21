@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo6</title>
+</head>
+<body>
+    <p>Grade<input type="text" id="g1" disabled></p>
+    <script>
+        var marks = parseInt(prompt("Enter your Marks"));
+        var grade="";
+        if(marks >= 80)
+        grade="A grade";
+        else
+        if(marks >= 60)
+        grade="B grade";
+        else
+        if(marks >= 40)
+        grade="C grade";
+        else
+        grade="Fail";
+        g1.value=grade;
+    </script>
+</body>
+</html>

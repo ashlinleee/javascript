@@ -1,0 +1,7 @@
+Javascript : Objects only.
+prototype+constructores
+objects created with new()
+inheritance using prototypes
+constructor/prototype gives only initial definition
+object definitions can be changed at run time.
+

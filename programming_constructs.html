@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo9</title>
+</head>
+<body>
+    <script>
+        function fun1()
+        {
+            alert("switchcase");
+            var score=parseInt(prompt("Enter the feedback score"));
+            var remarks;
+            switch (score)  
+            { 
+                case 5: 
+                    remarks = "Excellent";  
+                    break;  
+                case 4:  
+                    remarks = "Very Good";    
+                    break; 
+                case 3:  
+                    remarks = "Good";    
+                    break;
+                case 2:  
+                    remarks = "Average";    
+                    break;
+                case 1:  
+                    remarks = "Below Average";    
+                    break;    
+                default :  
+                    remarks = "Incorrect Input" ;    
+            }  
+            alert(remarks);
+        }
+        function fun2()
+        {
+            alert("for loop");
+            for(let j=1,score=90 ; j<=10; j++, score-=10)
+            {
+                console.log("Ashlin "+j);
+                console.log("My score is:"+score);
+                console.log("**********");
+            }
+
+        }
+        function fun3()
+        {
+            alert("do while loop");
+            var ctr=0;
+            do
+            {
+                document.write("CODE<br>");
+                document.write("EAT<br>");
+                document.write("SLEEP<br>");
+                document.write("<hr>");
+                ctr++
+            }
+            while(ctr<5);
+        }
+        function fun4()
+        {
+            alert("while loop");
+            var ctr=10;
+            while (ctr>=-5)
+            {
+                document.write("Ashlin"+ctr);
+                document.write("<br>");
+                ctr-=2;
+
+            }
+        }
+        function fun5()
+        {
+            alert("foreach loop");
+        }
+    </script>
+    <input type="button" onclick="fun1()" value="switchcase">
+    <br>
+    <input type="button" onclick="fun2()" value="for loop">
+    <br>
+    <input type="button" onclick="fun3()" value="do while loop">
+    <br>
+    <input type="button" onclick="fun4()" value="while loop">
+    <br>
+    <input type="button" onclick="fun5()" value="foreach loop">
+    <br>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object 2</title>
+</head>
+<body>
+    <script>
+        function skit(name,number){
+            this.skitName = name,
+            this.noOfActors = number,
+            this.dialogue = function(){
+                alert("I know not why") 
+            }
+        }
+
+        let ashlin = new skit( "Grimm", 23);
+        alert(`Skit Name : ${ashlin.skitName}`)
+        alert(`No. of actors : ${ashlin.noOfActors}`)
+        ashlin.dialogue()
+    </script>
+</body>
+</html>

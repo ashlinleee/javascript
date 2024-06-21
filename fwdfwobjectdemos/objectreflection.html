@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>
+Learning Objects in Javascript
+</title>
+</head>
+<body>
+<script>
+var obj=
+{
+name: "Lata",
+designation: "Project Manager",
+greet:{msg:"hi"}
+
+}
+
+
+var my_obj = Object.create({greet:{msg:"hi"}});
+function reflectexample1()
+{
+alert('hi');
+
+var y=Object.keys(obj);
+alert(y[0]);
+alert(Object.keys(obj));
+alert("Greet"+ obj.greet.msg);
+
+//alert(Object.keys(my_obj));
+alert(my_obj.greet.msg);
+alert(Object.getOwnPropertyNames(obj));
+alert(Object.getOwnPropertyNames(my_obj));
+
+}
+
+function reflectexample2()
+{
+for(x in Object.keys(obj))
+{
+alert(x);
+}
+
+/* for(x in Object.getOwnPropertyNames(obj))
+{
+alert(x);
+}
+*/
+
+alert("bye")
+}
+
+</script>
+<h1>Retrieval, Reference, Update, Reflection </h1>
+
+<input type="button" value="Reflect Example2" onclick="reflectexample1()">
+
+<br/>
+<input type="button" value="Reflect Example3" onclick="reflectexample2()">
+
+</body>
+

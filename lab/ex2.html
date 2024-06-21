@@ -1,0 +1,68 @@
+<!-- Develop JS to use decision-making and looping statements -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email Generator</title>
+</head>
+<body>
+
+<h2>Email Generator</h2>
+
+<div id="emailGenerator" style="display: none;">
+  <label for="nameInput">Enter Name:</label>
+  <input type="text" id="nameInput">
+  <label for="surnameInput">Enter Surname:</label>
+  <input type="text" id="surnameInput">
+  <button onclick="addEmail()">Add Email</button>
+  <button onclick="generateEmails()">Generate Emails</button>
+
+  <ul id="emailList">
+  </ul>
+</div>
+
+<script>
+  let names = [];
+  let surnames = [];
+
+  function toggleEmailGenerator() {
+    const emailGenerator = document.getElementById('emailGenerator');
+    emailGenerator.style.display = 'block';
+
+    const toggleButton = document.getElementById('toggleButton');
+    toggleButton.style.display = 'none';
+  }
+
+  function addEmail() {
+    const nameInput = document.getElementById('nameInput').value;
+    const surnameInput = document.getElementById('surnameInput').value;
+
+    if (nameInput.trim() !== '' && surnameInput.trim() !== '') {
+      names.push(nameInput.trim());
+      surnames.push(surnameInput.trim());
+
+      document.getElementById('nameInput').value = '';
+      document.getElementById('surnameInput').value = '';
+    } else {
+      alert('Please enter both name and surname.');
+    }
+  }
+
+  function generateEmails() {
+    const emailList = document.getElementById('emailList');
+    emailList.innerHTML = '';
+
+    for (let i = 0; i < names.length; i++) {
+      const email = names[i].toLowerCase() + surnames[i].toLowerCase() + '@gmail.com';
+      const listItem = document.createElement('li');
+      listItem.textContent = email;
+      emailList.appendChild(listItem);
+    }
+  }
+</script>
+
+<button id="toggleButton" onclick="toggleEmailGenerator()">Email Generator</button>
+
+</body>
+</html>

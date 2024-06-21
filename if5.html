@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo8</title>
+</head>
+<body>
+    <p>Tax<input type="text" id="txtTax" disabled></p>
+    <script>
+        var income = parseInt(prompt("Enter the gross income"));
+        var tax=0;
+        if (income<=600000)
+            tax=0;
+        else 
+        if (income<=1000000)
+        tax=(income - 600000) * .10;
+        else 
+        if (income<=1200000)
+        tax=(income - 1000000) * .15 + 400000 * .10 + 0;
+        else 
+        if (income<=1500000)
+        tax=(income - 1200000) * .20 + 200000 * .15 + 400000 * .10 + 0;
+        else
+        tax=(income - 1500000) * .30 + 300000 * .20 + 200000 * .15 + 400000 * .10 + 0;
+        txtTax.value=tax;
+    </script>
+</body>
+</html>

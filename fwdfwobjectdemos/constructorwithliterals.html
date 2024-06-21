@@ -1,0 +1,29 @@
+<html>
+<head>
+<script language="javascript">
+function person(fname, lname)
+{
+x=
+{
+firstname:fname,
+lastname:lname
+}
+return x;
+}
+var y= person("Lata", "Bhambwani");
+y.grade="Excellent";
+y.greet=function()
+{
+alert("hi");
+}
+alert(y.firstname);
+alert(y.lastname);
+alert(y.grade);
+y.greet();
+delete y.lastname;
+alert(y.lastname);
+</script>
+</head>
+<body>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<html>
+<head>
+<script language="javascript">
+function Person(fname, lname)
+{
+this.firstname= fname;
+this.lastname=lname;
+this.greet=function()
+{
+alert("Hi "+this.firstname);
+}
+}
+var x= new Person("Mahendra", "Gupta");
+alert(x.firstname);
+alert(x.lastname);
+x.greet();
+
+y = x;
+y.firstname="Lata";
+alert(" X: "+x.firstname);
+alert("Y: "+ y.firstname);
+delete y.firstname;
+x=null;
+
+alert(x);
+alert("Y: after delete "+ y.firstname);
+</script>
+</head>
+<body>
+<h1>USING COnstructor Functions</h1>
+</body>
+</html>

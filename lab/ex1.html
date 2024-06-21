@@ -1,0 +1,28 @@
+<!-- write simple javascript with html for arithmetic expression evaluation and message prompting -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arithmetic Expression Evaluator</title>
+<script>
+    function evaluateExpression() {
+        var expression = document.getElementById("expressionInput").value;
+
+        try {
+            var result = eval(expression);
+
+            document.getElementById("result").innerText = "Result: " + result;
+        } catch (error) {
+            document.getElementById("result").innerText = "Error: " + error.message;
+        }
+    }
+</script>
+</head>
+<body>
+    <h1>Arithmetic Expression Evaluator</h1>
+    <input type="text" id="expressionInput" placeholder="Enter arithmetic expression">
+    <button onclick="evaluateExpression()">Evaluate</button>
+    <p id="result"></p>
+</body>
+</html>

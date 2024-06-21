@@ -1,0 +1,35 @@
+<html>
+    <head>
+    <title>Fetch API</title>
+    </head>
+    <body>
+        <script>
+            async function getData()
+            {
+                const rsponse = await fetch ("https://localhost:7011/api/Curd");
+                const jsonData = await response.json();
+                alert(json);
+            }
+
+            async function postdata()
+            {
+                alert("Data Updated")
+            }
+
+            async function deletedata()
+            {
+                alert("Data Delete")
+            }
+
+        </script>
+
+         <input type="button" onclick="getData" value="get">
+
+         <input type="button" onclick="getData" value="post">
+
+         <input type="button" onclick="getData" value="put">
+
+         <input type="button" onclick="getData" value="delete">
+
+    </body>
+</html>

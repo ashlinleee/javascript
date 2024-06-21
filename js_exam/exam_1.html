@@ -1,0 +1,31 @@
+<!--Write a JavaScript function to capitalize the first letter of each word in a given string.
+Test Data:
+document.write(capitalize_Words('js string exercises'));
+Expected Output: Js String Exercises
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam1</title>
+</head>
+<body>
+    <script>
+        function capitalizeStr(str) 
+        {
+            document.write(capitalize_Words(str));
+        }
+        function capitalize_Words(string) 
+        {
+            let words = string.split(" ");  
+            for (let i =  0; i < words.length; i++)  
+            {
+                words[i] = words[i].charAt(0).toUpperCase() + words[i].substr(1);
+            }
+            return words.join(" ");           
+        }
+        capitalizeStr("js string exercises");
+    </script>
+</body>
+</html>

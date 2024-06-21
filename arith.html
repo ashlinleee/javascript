@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arithmetic Operations in JavaScript</title>
+</head>
+<body>
+
+<h1>Arithmetic Operations</h1>
+
+<p>Enter two numbers and click the button to perform arithmetic operations:</p>
+
+<input type="number" id="num1" placeholder="Enter first number">
+<input type="number" id="num2" placeholder="Enter second number">
+
+<button onclick="performOperations()">Perform Operations</button>
+
+<p id="output"></p>
+
+<script>
+  function performOperations() {
+    // Get user input
+    let num1 = parseFloat(document.getElementById("num1").value);
+    let num2 = parseFloat(document.getElementById("num2").value);
+
+    // Addition
+    let sum = num1 + num2;
+
+    // Subtraction
+    let difference = num1 - num2;
+
+    // Multiplication
+    let product = num1 * num2;
+
+    // Division
+    let quotient = num1 / num2;
+
+    // Modulus (remainder)
+    let remainder = num1 % num2;
+
+    // Display the results
+    document.getElementById("output").innerHTML = "Sum: " + sum + "<br>" +
+                                                    "Difference: " + difference + "<br>" +
+                                                    "Product: " + product + "<br>" +
+                                                    "Quotient: " + quotient + "<br>" +
+                                                    "Remainder: " + remainder;
+  }
+</script>
+
+</body>
+</html>

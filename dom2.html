@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    function domA()
+    {
+        alert("dom A");
+        var x=document.getElementById("t1").getAttribute("value");
+        x=t1.value
+        let y="color:"+x;
+        alert(y);
+        document.getElementById("t1").setAttribute("style",y);
+    }
+    function domB()
+    {
+        alert("dom B");
+        x=t1.value
+        document.getElementById("t1").style.backgroundColor=x;
+        document.getElementById("t1").style.fontSize='2em';
+        document.getElementById("t1").style.width="50%";
+        document.getElementById("t1").style.borderRadius="5em";
+        document.getElementById("t1").style.color="white";
+    }
+    function domC()
+    {
+        alert("dom C");
+        var mystyle="color:green;background-color:yellow;font-size:2em;border-radius:5em;";
+        t1.setAttribute("style",mystyle);
+    }
+    function domD()
+    {
+        alert("dom D");
+        var x=document.createElement("h1");
+        x.innerHTML="Knowlwdge with humility is like diamond on gold";
+        document.getElementById("d1").appendChild(x);
+    }
+   </script> 
+   <input type="text" value="" id="t1">
+   <input type="button" onclick="domA()" value="Dom A">
+   <input type="button" onclick="domB()" value="Dom B">
+   <input type="button" onclick="domC()" value="Dom C">
+   <input type="button" onclick="domD()" value="Dom D">
+   <div id="d1" style="width:52%;height:3em;background-color:yellow;color:red;"></div>
+</body>
+</html>

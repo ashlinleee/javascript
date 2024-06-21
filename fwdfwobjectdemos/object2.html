@@ -1,0 +1,28 @@
+<html>
+<head>
+<script language="javascript">
+
+var student={};
+student.name="Moni";
+student.university="NNN";
+alert("hi");
+student.date_of_birth=new Date(1985, 2, 5,0,0,0,0);
+alert(student.name);
+alert(student.university);
+alert(student.date_of_birth);
+student.age=function()
+{
+return(new Date().getTime())- this.date_of_birth.getTime();
+}
+alert(student.age());
+
+
+
+
+
+</script>
+</head>
+<body>
+
+</body>
+</html>

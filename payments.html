@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>Payments</title>
+    </head>
+    <body>
+        
+        <script>
+            function upi(Mfrom, Mto, amount, fun1) {
+                if (Mfrom == null || Mto == null || amount == null) {
+                    fun1("Error");
+                } else {
+                    fun1("Success");
+                }
+            }
+
+            function Bhimupi(m1, m2, amt) {
+                upi(m1, m2, amt, function (a) {
+                    if (a.toLowerCase() == "success") {
+                        document.write(
+                            "<p style = 'color:green'>Payment Done </p>"
+                        );
+                    } else if (a.toLowerCase() == "error") {
+                        document.write("<p style = 'color: red'>Error</p>");
+                    } else {
+                        document.write("Unknown");
+                    }
+                });
+            }
+
+            function Gpay(m1,m2,amt)
+            {
+                upi(m1, m2, amt, function (a) {
+                    if (a.toLowerCase() == "success") {
+                        document.write(
+                            "<img src = 'success.jpeg' style='width:150px;height:150px'>"
+                        );
+                    } else if (a.toLowerCase() == "error") {
+                        document.write( "<img src = 'fail.jpeg' style='width:150px;height:150px'>");
+                    } else {
+                        document.write("Unknown");
+                    }
+                });  
+            }
+
+            function phonepay(m1, m2, amt) {
+                upi(m1, m2, amt, function (a) {
+                    if (a.toLowerCase() == "success") {
+                        document.write(
+                            "<p style = 'color:green'>&#x20B9 9000 recieved </p>"
+                        );
+                    } else if (a.toLowerCase() == "error") {
+                        document.write("<p style = 'color: red'>&#8377 9000 not recieved</p>");
+                    } else {
+                        document.write("Unknown");
+                    }
+                });
+            }
+        </script>
+        <button onclick="Bhimupi(null,null,9000)">UPI1</button>
+        <button onclick="Bhimupi(789056436728,124678397490,9000)">UPI2</button>
+        <button onclick="Gpay(null,null,9000)">Gpay1</button>
+        <button onclick="Gpay(789056436728,124678397490,9000)">Gpay2</button>
+        <button onclick="phonepay(null,null,9000)">Phonepay1</button>
+        <button onclick="phonepay(789056436728,124678397490,9000)">Phonepay2</button>
+    </body>
+</html>

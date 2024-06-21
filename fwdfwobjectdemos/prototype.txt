@@ -1,0 +1,42 @@
+<script type="text/javascript">
+
+/*code for extending String object with method that writes text backwards*/
+
+//core custom method for writing text backwards
+function outputbackwards(){
+for (i=this.length-1;i>=0;i--)
+document.write(this.charAt(i))
+}
+
+//Attach custom method to string object
+String.prototype.writeback=outputbackwards
+
+</script>
+
+
+<script type="text/javascript">
+var message1="Welcome to my site!"
+message1.writeback()
+var message2="Today is a beautiful day"
+message2.writeback()
+</script>
+
+______
+<script type="text/javascript">
+
+//create dummy object
+function dummy(){
+}
+
+//Create custom property
+function dummyproperty(){
+}
+
+//Create custom method
+function dummymethod(){
+}
+
+dummy.prototype.prop=dummyproperty
+dummy.prototype.method=dummymethod
+
+</script>
